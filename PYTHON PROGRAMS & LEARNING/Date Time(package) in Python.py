@@ -1,0 +1,37 @@
+# Date Time(package) in Python
+
+import datetime as dt
+current_date=dt.date.today()
+print("current Date : ",current_date)
+
+new=dt.date(2023,12,24)
+print(new)
+print("year :",new.year)
+print("month : ",new.month)
+print("day : ",new.day)
+print("--------------------------------------")
+a=dt.time(10,45,5,555)
+print(a)
+print("hours :",a.hour)
+print("minute :",a.minute)
+print("seconds : ",a.second)
+print("microsecond : ",a.microsecond)
+print("--------------------------------------")
+current_time=dt.datetime.now()
+print("current time :",current_time)
+print("--------------------------------------")
+new=dt.datetime(2023,6,17,11,14,22)
+print(new)
+print(new.date())
+print(new.time())
+print("---------------------------------------")
+# finding how many days for next public exam
+current=dt.datetime.now()
+public_exam=dt.datetime(2024,5,5)
+difference=public_exam-current
+print(difference)
+print("_____________________________________________")
+current=dt.date().now()
+print(current)
+s=current.strftime("%A %b %d %Y")
+print(s)
