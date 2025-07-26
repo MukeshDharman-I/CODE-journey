@@ -1,0 +1,17 @@
+import turtle
+wn=turtle.Screen()
+t=turtle.Turtle()
+t.speed=(0)
+t.shape("turtle")
+t.color("red",'green')
+wn.title("CMC GRAPHICS")
+wn.bgcolor('black')
+t.setheading(360)
+t.fillcolor("cyan")
+t.begin_fill()
+for i in range(4):
+    t.forward(100)
+    t.right(90)
+t.end_fill()
+t.hideturtle()
+turtle.done()

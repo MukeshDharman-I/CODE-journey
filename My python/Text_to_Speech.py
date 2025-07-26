@@ -1,0 +1,18 @@
+import pyttsx3
+engine = pyttsx3.init()
+rate = engine.getProperty('rate')
+volume = engine.getProperty('volume')
+print(f"Volume : {volume} \nRate : {rate}")
+engine.setProperty('rate',140)
+engine.setProperty('volume',6.0)
+voices=engine.getProperty('voices')
+engine.setProperty('voice',voices[0].id)
+inn = input("Enter text : ")
+engine.say(inn)
+engine.runAndWait()
+for voice in voices:
+    print(f"voice : {voice.name}")
+    print(f"language : {voice.languages}")
+    print(f"Gender : {voice.gender}")
+    print(f"Age : {voice.age}")
+    print(f"ID : {voice.id}")
